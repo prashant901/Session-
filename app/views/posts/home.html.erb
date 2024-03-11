@@ -1,0 +1,8 @@
+<h1>Welcome to the Home Page</h1>
+
+<% @posts.each do |post| %>
+  <div>
+    <p><strong>Posted by:</strong> <%= post.user.name %></p>
+    <p><strong>Content:</strong> <%= post.content %></p>
+  </div>
+<% end %>

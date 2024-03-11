@@ -1,0 +1,23 @@
+<div class="comment" >
+    <p><%= comment.content %></p>
+ 
+
+
+<% @post.comments.each do |comment| %>
+  <%= comment.content %>
+
+
+    <% if comment.replies.any? %>
+    <div class="replies">
+        <% comment.replies.each do |reply| %>
+
+            
+
+        <div class="reply">
+            <%= reply.content %>
+        </div> 
+      <% end %>
+    </div>
+    <% end %>
+    <% end %>
+</div>

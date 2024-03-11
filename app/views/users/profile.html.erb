@@ -1,0 +1,19 @@
+<h1><%=@user.name%> Profile</h1>
+
+
+
+
+
+<% if @user %>
+  
+  
+  <P><%= @user.name%> you are on the Profile Page.</P>
+  <p><%= @user.name%> Your ID is: <%= @user.id %></p>
+  
+<% else %>
+  <p>No user logged in.</p>
+<% end %>
+
+<%= link_to 'Create Post',new_post_path  %> |
+
+<%= link_to 'Back', root_path %>
